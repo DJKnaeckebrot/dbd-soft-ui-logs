@@ -17,7 +17,7 @@ This is a simple UI for viewing logs from the [dbd-soft-ui](https://github.com/A
             serverUUIDs: [],
         },
         logs: {
-            enabled: false,
+            enabled: true,
             key: "YOURKEYHERE",
         }
     },
