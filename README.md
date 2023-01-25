@@ -8,9 +8,18 @@ This is a simple UI for viewing logs from the [dbd-soft-ui](https://github.com/A
 2. Enable the function in the themeConfig of your [dbd-soft-ui](https://github.com/Assistants-Center/DBD-Soft-UI)
 ```js
    theme: SoftUI({
-    logspage: {
-        enabled: true,
-        key: "YOURKEYHERE",
+    admin: {
+        backgroundUrl: "https://t3.ftcdn.net/jpg/03/44/67/38/360_F_344673825_6fU6IORyipkYpfU1mg2vmxtHxDToUO6Q.jpg",
+        pterodactyl: {
+            enabled: false,
+            apiKey: "apiKey",
+            panelLink: "https://panel.website.com",
+            serverUUIDs: [],
+        },
+        logs: {
+            enabled: false,
+            key: "YOURKEYHERE",
+        }
     },
    },
 ```
