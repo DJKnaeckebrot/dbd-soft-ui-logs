@@ -62,10 +62,11 @@ If you think this project could be improved, or you found a bug, feel free to cr
 
 ## Release Notes
 
-## [1.0.1]
+## [1.1.0]
 
-- Fixed a bug where the logs would not send
-- Added Feature that the bot will send once it is ready
+- Removed the need to always pass all parameters to the send function
+- Added client.dlu to store data
+- Remove redundant code
 
 [Full Changelog](CHANGELOG.md)
 
