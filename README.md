@@ -27,19 +27,18 @@ This is a simple UI for viewing logs from the [dbd-soft-ui](https://github.com/A
 ```js
 const DLU = require('dbd-soft-ui-logs')
 
+client.dlu = {
+    key: 'YOURKEYHERE',
+    dashboard_url: 'YOURURLHERE'
+}
+
 client.on('ready', () => {
-    DLU.register(client, {
-        dashboard_url: 'YOURURLHERE',
-        key: 'YOURKEYHERE'
-    })
+    DLU.register(client)
 })
 
 process.on('unhandledRejection', (reason, p) => {
   DLU.send(client, {
-    dashboard_url: 'YOURURLHERE',
-    title: 'Unhandled Rejection',
     description: reason,
-    key: 'YOURKEYHERE'
   })
 })
 ```
