@@ -46,6 +46,8 @@ process.on('unhandledRejection', (reason, p) => {
 
 **Make sure to replace the values in the code with your own**
 
+You can use the send function to send any log you want to be shown in the Soft UI.
+
 ## Usage
 
 Once installed you can access the UI by going to the Admin Panel.
