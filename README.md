@@ -51,3 +51,19 @@ Once installed you can access the UI by going to the Admin Panel.
 MIT
 
 See [License](LICENSE.md) for more information.
+
+## Contributing
+
+If you think this project could be improved, or you found a bug, feel free to create an issue or a pull request.
+
+## Release Notes
+
+### 1.0.0
+
+- Initial release
+
+[Full Changelog](CHANGELOG.md)
+
+---
+
+**Enjoy**
