@@ -15,7 +15,7 @@ module.exports.register = async function (client, data) {
 
     await send(client, {
         title: "Bot Started",
-        description: `[${new Date().toLocaleString()}] ${initial.description}`,
+        description: `[${new Date().toLocaleString()}] Log collection is ACTIVE and sends to ${client.dlu.dashboard_url}`,
     })
 }
 
