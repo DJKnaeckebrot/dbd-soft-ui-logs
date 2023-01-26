@@ -27,13 +27,11 @@ This is a simple UI for viewing logs from the [dbd-soft-ui](https://github.com/A
 ```js
 const DLU = require('dbd-soft-ui-logs')
 
-client.dlu = {
-    key: 'YOURKEYHERE',
-    dashboard_url: 'YOURURLHERE'
-}
-
 client.on('ready', () => {
-    DLU.register(client)
+    DLU.register(client, {
+        key: 'YOURKEYHERE',
+        dashboard_url: 'YOURURLHERE'
+    })
 })
 
 process.on('unhandledRejection', (reason, p) => {
@@ -62,11 +60,10 @@ If you think this project could be improved, or you found a bug, feel free to cr
 
 ## Release Notes
 
-## [1.1.0]
+## [1.1.1]
 
-- Removed the need to always pass all parameters to the send function
-- Added client.dlu to store data
-- Remove redundant code
+- Removed a bug with sending data
+- Merged PR #1
 
 [Full Changelog](CHANGELOG.md)
 

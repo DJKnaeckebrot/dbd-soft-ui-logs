@@ -2,6 +2,11 @@
 
 All notable changes to the "dbd-soft-ui-logs" module will be documented in this file.
 
+## [1.1.1]
+
+- Removed a bug with sending data
+- Merged PR #1
+
 ## [1.1.0]
 
 - Removed the need to always pass all parameters to the send function
