@@ -6,36 +6,30 @@ module.exports.register = async function (client, data) {
     if (client === undefined) return console.log(`${consolePrefix} ${'Client has not been specified!'.red}`)
     if (data === undefined) return console.log(consolePrefix + "No Data has been entered!");
 
-    console.log(consolePrefix + "Log collection is " + colors.brightGreen("ACTIVE"))
-
-    let initial = {
-        title: "Bot Started",
-        description: "Bot has been started!",
+    client.dlu = {
+        key: data.key,
+        dashboard_url: data.dashboard_url,
     }
 
-    initial.description = `[${new Date().toLocaleString()}] ${initial.description}`
+    console.log(consolePrefix + "Log collection is " + colors.brightGreen("ACTIVE"))
 
-    await send(client, initial)
+    await send(client, {
+        title: "Bot Started",
+        description: `[${new Date().toLocaleString()}] ${initial.description}`,
+    })
 }
 
 module.exports.send = async function (client, data) {
     if (client === undefined) return console.log(`${consolePrefix} ${'Client has not been specified!'.red}`)
     if (data === undefined) return console.log(consolePrefix + "No Data has been entered!");
 
-    // Add a timestamp infront of data.description
-    data.description = `[${new Date().toLocaleString()}] ${data.description}`
-
-    let list = {
+    await send(client, {
         title: data.title,
-        description: data.description,
-    }
-
-    await send(client, list)
+        description: `[${new Date().toLocaleString()}] ${data.description}`,
+    })
 }
 
 async function send(client, data) {
-
-    // console.log(consolePrefix + "Sending log to dashboard URL : " + client.dlu.dashboard_url + "/stats/logs/update")
     await fetch(client.dlu.dashboard_url + "/stats/logs/update", {
         method: "post",
         body: JSON.stringify(data),
