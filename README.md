@@ -61,9 +61,10 @@ If you think this project could be improved, or you found a bug, feel free to cr
 
 ## Release Notes
 
-### 1.0.0
+## [1.0.1]
 
-- Initial release
+- Fixed a bug where the logs would not send
+- Added Feature that the bot will send once it is ready
 
 [Full Changelog](CHANGELOG.md)
 
